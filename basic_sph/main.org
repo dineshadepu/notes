@@ -1,0 +1,91 @@
+#+startup: hideblocks
+#+startup: overview
+#+LaTeX_CLASS: elsarticle
+# #+LaTeX_CLASS_OPTIONS: [aip, jmp, amsmath, amssymb, reprint]
+#+OPTIONS: author:nil date:nil title:nil toc:nil
+
+#+LaTeX_HEADER: \usepackage{booktabs}
+#+LaTeX_HEADER: \usepackage{lineno,hyperref}
+#+LaTeX_HEADER: \modulolinenumbers[5]
+
+#+LaTeX_HEADER: \journal{Journal of \LaTeX\ Templates}
+
+
+# Change the author name, title and other parts inside this latex block
+#+BEGIN_EXPORT latex
+\begin{frontmatter}
+
+\title{Elsevier \LaTeX\ template\tnoteref{mytitlenote}}
+\tnotetext[mytitlenote]{Fully documented templates are available in the elsarticle package on \href{http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle}{CTAN}.}
+
+%% Group authors per affiliation:
+\author{Elsevier\fnref{myfootnote}}
+\address{Radarweg 29, Amsterdam}
+\fntext[myfootnote]{Since 1880.}
+
+%% or include affiliations in footnotes:
+\author[mymainaddress,mysecondaryaddress]{Elsevier Inc}
+\ead[url]{www.elsevier.com}
+
+\author[mysecondaryaddress]{Global Customer Service\corref{mycorrespondingauthor}}
+\cortext[mycorrespondingauthor]{Corresponding author}
+\ead{support@elsevier.com}
+
+\address[mymainaddress]{1600 John F Kennedy Boulevard, Philadelphia}
+\address[mysecondaryaddress]{360 Park Avenue South, New York}
+
+\begin{abstract}
+This template helps you to create a properly formatted \LaTeX\ manuscript.
+\end{abstract}
+
+\begin{keyword}
+\texttt{elsarticle.cls}\sep \LaTeX\sep Elsevier \sep template
+\MSC[2010] 00-01\sep  99-00
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+#+END_EXPORT
+* Function Approximation and Derivation Approximation
+  A function is approximated by
+
+  \begin{equation*}
+    <f(\underline{x}_i)> = \sum f(\underline{x}_j) W(\underline{x}_i - \underline{x}_j, h) \frac{m_j}{\rho_j}
+  \end{equation*}
+
+  And a derivative by
+
+  \begin{equation*}
+    <\nabla f(\underline{x}_i)> = \sum f(\underline{x}_j) \nabla W(\underline{x}_i - \underline{x}_j, h) \frac{m_j}{\rho_j}
+  \end{equation*}
+
+  A better derivative approximation is
+
+  \begin{equation*}
+    <\nabla f(\underline{x}_i)> = \sum (f(\underline{x}_j) - f(\underline{x}_i)) \nabla W(\underline{x}_i - \underline{x}_j, h) \frac{m_j}{\rho_j}
+  \end{equation*}
+* Problems with SPH
+  The following are some problems with SPH formulation
+
+  - Tensile instability.
+  - Inaccurate gradient estimation (relative to grid based and other Lagrangian schemes)
+  - Lack of boundary conditions
+  - An interface problem which creates spurious oscillations
+
+
+** Kernel problem
+   Cubic spline has negative second derivative near the typical interparticle
+   spacing, this creates stability issues in tension. This problem was solved by
+   adding artificial dissipation, they call it conservative smoothing cite:Wen_1994, which
+   removes spurious short wavelength (\lambda=h) oscillations.
+
+
+bibliographystyle:../elsarticle-num
+bibliography:~/Dropbox/Research/references.bib
+
+#+BEGIN_EXPORT latex
+% GAME OVER
+%*******************************************************************
+\end{document}
+#+END_EXPORT
