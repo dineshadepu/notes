@@ -78,8 +78,11 @@ This template helps you to create a properly formatted \LaTeX\ manuscript.
    Cubic spline has negative second derivative near the typical interparticle
    spacing, this creates stability issues in tension. This problem was solved by
    adding artificial dissipation, they call it conservative smoothing cite:Wen_1994, which
-   removes spurious short wavelength (\lambda=h) oscillations.
+   removes spurious short wavelength (\lambda\approx h) oscillations.
 
+
+* SPH advantages
+  - High deformation events can be simulated.
 
 bibliographystyle:../elsarticle-num
 bibliography:~/Dropbox/Research/references.bib
