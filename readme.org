@@ -1,0 +1,106 @@
+* Books
+
+** Fracture by Hermann
+** Classical mechanics
+** Calculus of variations
+** Matrix structural analysis
+** Computer graphics
+   The notes are in the book.
+   Done till lecture 3.
+
+   - Lecture 4
+     Looking at lecture 4
+     Barycentric coordinates
+     Optics
+     Nyquist-shannon theorem
+     Images as frequencies
+     Read the given resources
+     Complete the quiz
+
+     Doing assignment 1
+
+** Physics based modelling
+** Mathematical methods
+*** TODO Chapter 2
+    1. At factor space <2019-09-28 Sat>.
+
+       =References=:
+       1. [ ] [[http://people.math.gatech.edu/~heil/7338/fall09/ ][Functional analysis notes]] by [[http://people.math.gatech.edu/~heil/][Christopher Heil]]. [[https://people.math.gatech.edu/~heil/handouts/quotient.pdf][Quotient spaces]].
+
+       2. Notes of =Santiago Canez= (6 pages online) [[https://www3.nd.edu/~jdiller/teaching/archive/spring12_20820/quotient-spaces.pdf][link]]
+
+       =TODO= Verify how is he getting the subspace inequalities by writing out
+       the equivalence class relation.
+
+       =Question=: While defining the factor space, he is using a single subspace
+       W, but he is having many different -equivalence classes-. Shouldn't this
+       be a single equivalence class? And the factor space will be a single
+       equivalence class. If we have many subspaces, then we will have many
+       equivalence classes, and a factor space makes sense.
+
+       =Question=: How is the basis of the equivalence class different from W?
+       It is confusing.
+
+
+
+    2. Direct sums;
+
+** Differential geometry
+
+
+
+
+
+* Project
+
+** DEM Force analysis
+   This is implementation of DEM in 3d. We will do 8 test cases as given in
+   Chung 2011 paper. The details of implementation are in [[~/phd/papers/dem_force_analysis/src/chung_tests/readme.md][readme file]]. The
+   source code will be in the {pysph} folder. These 8 examples will be in the
+   paper folder.
+
+   1. Implement DEM particle particle with Hertz formulation.
+   2. Implement DEM particle wall with Hertz formulation.
+
+   Implement Chung paper.
+
+
+** Chung Papers
+   1. Test 1 (Done)
+   2. Test 2 (Done)
+   3. Test 3: Reading Anomalous energy dissipation in molecular dynamics
+      simulation of grains by Luding. It has spring dashpot model (To understand
+      two body modelling.). Then look at "On the Determination of the Damping
+      Coefficient of Non-linear Spring-dashpot System to Model Hertz Contact for
+      Simulation by Discrete Element Method" paper, and understand how the
+      nonlinear damping is dealt.
+   4. Test 4
+   5. Test 5
+   6. Test 6
+   7. Test 7
+   8. Test 8
+
+
+
+* Fracture readings
+
+** Elasticity and Geometry (Book)
+   - Writing in fracture notes
+
+*** Chapter 1
+    At 1.3.1 Rigid body rotations, infinitesimal rotations.
+
+** Derivation of discrete bending forces and their gradients
+   Grinspun
+
+** A Discrete Model for Inelastic Deformation of Thin Shells
+   Grinspun
+
+
+* References
+
+** [[http://people.math.gatech.edu/~heil/][Christopher Heil]]
+   1. [[http://people.math.gatech.edu/~heil/handouts/proofs.pdf][Writing proofs]]
+   2. [[http://people.math.gatech.edu/~heil/handouts/limits.pdf][Limits for Calc 1 students]]
+   3. [[http://people.math.gatech.edu/~heil/handouts/banach.pdf][Banach and Hilbert space review]]
+   4. [[http://people.math.gatech.edu/~heil/handouts/cardinality.pdf][Cardinality of sets review (6 pages)]]
